@@ -20,7 +20,7 @@ export default function HeroInvitation() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/api/username", { name });
+      const response = await axios.post(`https://peter-sheba.vercel.app/api/username`, { name });
       setName("");
       setSubmitSuccess(true);
       setUserLinks([...userLinks, response.data.data]);
@@ -31,7 +31,7 @@ export default function HeroInvitation() {
 
   const fetchLink = async () => {
     try {
-      const response = await axios.get("/api/username");
+      const response = await axios.get("https://peter-sheba.vercel.app/api/username");
       setUserLinks(response.data.data);
     } catch (error) {
       console.error("Error fetching wishes:", error);
