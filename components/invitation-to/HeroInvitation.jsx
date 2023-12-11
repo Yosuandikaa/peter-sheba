@@ -20,7 +20,15 @@ export default function HeroInvitation() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`https://peter-sheba.vercel.app/api/username`, { name });
+      const response = await axios.post(
+        `https://peter-sheba.vercel.app/api/username`,
+        { name },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       setName("");
       setSubmitSuccess(true);
       setUserLinks([...userLinks, response.data.data]);
@@ -31,7 +39,13 @@ export default function HeroInvitation() {
 
   const fetchLink = async () => {
     try {
-      const response = await axios.get("https://peter-sheba.vercel.app/api/username");
+      const response = await axios.get(
+        "https://peter-sheba.vercel.app/api/username",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          }}
+      );
       setUserLinks(response.data.data);
     } catch (error) {
       console.error("Error fetching wishes:", error);
@@ -176,18 +190,28 @@ export default function HeroInvitation() {
       </div>
 
       <div className="mt-4 px-4 md:px-24">
-        <h2 className="text-lg font-bold">Daftar Tamu <span className="text-gray-600">{userLinks.length}</span></h2>
+        <h2 className="text-lg font-bold">
+          Daftar Tamu <span className="text-gray-600">{userLinks.length}</span>
+        </h2>
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-5">
           {userLinks.map((data, index) => (
-            <li key={index} className="px-4 py-8 rounded-lg bg-white shadow-lg flex flex-col space-y-4 flex-wrap w-full">
+            <li
+              key={index}
+              className="px-4 py-8 rounded-lg bg-white shadow-lg flex flex-col space-y-4 flex-wrap w-full"
+            >
               <h3 className="font-bold text-lg">{data?.name}</h3>
-              <span className="text-sm font-light text-gray-600">{`${window.location.origin}/invitation-to?nama=${encodeURIComponent(data?.name)}`}</span>
+              <span className="text-sm font-light text-gray-600">{`${
+                window.location.origin
+              }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</span>
               <CopyToClipboard
                 text={`${
                   typeof window !== "undefined" && window.location.origin
                 }/invitation-to?nama=${encodeURIComponent(data?.name)}`}
               >
-                <button className="bg-[#353434] text-white px-2 py-1 rounded-full" onClick={() => toast.success('Berhasil di salin')}>
+                <button
+                  className="bg-[#353434] text-white px-2 py-1 rounded-full"
+                  onClick={() => toast.success("Berhasil di salin")}
+                >
                   Salin URL
                 </button>
               </CopyToClipboard>

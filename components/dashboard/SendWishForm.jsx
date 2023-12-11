@@ -16,7 +16,11 @@ const SendWishForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://peter-sheba.vercel.app/api/wishes", { name, message });
+      const response = await axios.post(
+        "https://peter-sheba.vercel.app/api/wishes", { name, message }, {
+        headers: {
+          "Content-Type": "application/json",
+        }});
       setName("");
       setMessage("");
       setSubmitSuccess(true);
@@ -28,7 +32,10 @@ const SendWishForm = () => {
 
   const fetchWishes = async () => {
     try {
-      const response = await axios.get("https://peter-sheba.vercel.app/api/wishes");
+      const response = await axios.get("https://peter-sheba.vercel.app/api/wishes", {
+        headers: {
+          "Content-Type": "application/json",
+        }});
       setWishes(response.data.data);
     } catch (error) {
       console.error("Error fetching wishes:", error);
