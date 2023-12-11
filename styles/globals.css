@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Poppins';
 }
 
 a {
@@ -14,3 +18,84 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* styles/globals.css */
+
+@layer utilities {
+  .animate-fade-in-out {
+    animation: fade-in-out 0.5s ease-in-out;
+  }
+
+  @keyframes fade-in-out {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .page-container {
+    @apply min-h-screen bg-cover bg-center flex items-center justify-center text-white transition-opacity ease-in-out duration-500 transform scale-100;
+  }
+
+  .fade-in-out {
+    @apply opacity-[0.8]; /* Mulai dengan opacity 0 */
+    @apply animate-fade-in-out;
+  }
+
+  @keyframes fade-in-out {
+    0% {
+      opacity: 0.5;
+      transform: translateY(3px); /* Kecilkan perubahan transform */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Optional: Tambahkan cubic-bezier untuk smoothing */
+  @keyframes fade-in-out-smooth {
+    0% {
+      opacity: 0.5;
+      transform: translateY(3px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-out-smooth {
+    animation: fade-in-out-smooth 0.5s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .pinterest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px; /* Adjust the gap between items */
+    margin: 0 auto;
+    max-width: 1200px; /* Set the maximum width of the grid */
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+/* styles/MusicPlayer.css */
+.music-player {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
