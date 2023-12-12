@@ -5,6 +5,7 @@ import axios from "axios";
 import ThanksModal from "../modal/ThanksModal";
 import { toast } from "react-toastify";
 import MyModal from "../modal/ThanksModal";
+import apiService from "../../services/apiService";
 
 const SendWishForm = () => {
   const [name, setName] = useState("");
@@ -16,11 +17,10 @@ const SendWishForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://peter-sheba.vercel.app/api/wishes", { name, message }, {
-        headers: {
-          "Content-Type": "application/json",
-        }});
+      const response = await apiService.post(
+        // "https://peter-sheba.vercel.app/api/wishes",
+        "/api/wishes",
+         { name, message });
       setName("");
       setMessage("");
       setSubmitSuccess(true);
@@ -32,10 +32,8 @@ const SendWishForm = () => {
 
   const fetchWishes = async () => {
     try {
-      const response = await axios.get("https://peter-sheba.vercel.app/api/wishes", {
-        headers: {
-          "Content-Type": "application/json",
-        }});
+      const response = await apiService.get(
+        "api/wishes");
       setWishes(response.data.data);
     } catch (error) {
       console.error("Error fetching wishes:", error);

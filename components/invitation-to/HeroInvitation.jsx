@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
 import { toast } from "react-toastify";
+import apiService from "../../services/apiService";
 
 export default function HeroInvitation() {
   const router = useRouter();
@@ -20,14 +21,10 @@ export default function HeroInvitation() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        `https://peter-sheba.vercel.app/api/username`,
+      const response = await apiService.post(
+        // `https://peter-sheba.vercel.app/api/username`,
+        `/api/username`,
         { name },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
       );
       setName("");
       setSubmitSuccess(true);
@@ -39,12 +36,9 @@ export default function HeroInvitation() {
 
   const fetchLink = async () => {
     try {
-      const response = await axios.get(
-        "https://peter-sheba.vercel.app/api/username",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          }}
+      const response = await apiService.get(
+        "/api/username",
+        // "/api/username",
       );
       setUserLinks(response.data.data);
     } catch (error) {
