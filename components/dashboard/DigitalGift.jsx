@@ -167,7 +167,7 @@ const DigitalGift = () => {
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
           >
-            Gembala GKKI M2 Pdt Dr Lukas Kacaribu MH dan seluruh jemaat{" "}
+            Gembala GKKI M2 Pdt. Dr. Lukas Kacaribu, MH dan seluruh jemaat{" "}
           </span>
         </div>
         <div className="mt-3 pb-12">
