@@ -4,7 +4,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import 'aos/dist/aos.css';
 
 
-const Hero = ({action}) => {
+const Hero = ({action, isOpen}) => {
   const router = useRouter();
   const [nama, setNama] = useState('');
   const [registrationUrl, setRegistrationUrl] = useState('');
@@ -95,17 +95,17 @@ const Hero = ({action}) => {
   }, []);
   
   return (
-    <div  className={`page-container animate-fade-in-out-smooth ${fade ? ' fade-in-out' : ''} `} style={{ backgroundImage: `url(${backgrounds[backgroundIndex]})` }}>
+    <div  className={`page-container animate-fade-in-out-smooth h-screen ${fade ? ' fade-in-out' : ''} `} style={{ backgroundImage: `url(${backgrounds[backgroundIndex]})` }}>
       <div className="flex flex-col space-y-6 md:space-y-12 text-center">
         <h3 className="font-normal text-base md:text-xl">The Wedding Of</h3>
         <span className="font-great text-5xl md:text-7xl">Peter & Sheba</span>
         <div className="flex flex-col space-y-5 md:space-y-7">
           <div className="flex flex-col space-y-2">
-            <span className="text-sm md:text-base font-light">Dear / To</span>
-            <h3 className="font-semibold text-lg">{nama ?? 'Guest Name'}</h3>
+            <span className="text-sm md:text-base font-normal">Kepada:</span>
+            <h3 className="font-medium text-base md:text-lg">{nama ? nama : 'Nama tamu'}</h3>
           </div>
-          <button className="bg-transparent border-2 border-white p-2.5 md:p-3 rounded-full text-sm font-medium hover:bg-white hover:text-black transition-all ease-in-out" onClick={action}>
-            Open Announcement
+          <button className="p-2.5 md:p-3 rounded-full text-xs md:text-sm font-medium bg-white/90 text-black transition-all ease-in-out" onClick={action}>
+            {isOpen ? 'Tutup Undangan' : 'Buka Undangan'}
           </button>
         </div>
       </div>

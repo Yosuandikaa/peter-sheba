@@ -133,11 +133,14 @@ export default function HeroInvitation() {
   // };
 
   return (
-    <>
-      <div className="relative max-w-md mx-auto mt-16 p-8 md:p-10 bg-white rounded-3xl shadow-lg">
-        <h3 className="font-bold text-lg text-center m-0 mb-4">
+    <div className="">
+          <h3 className="font-bold text-lg text-center m-0 mt-6">
           Tambah Tamu Undangan
         </h3>
+      <div className="relative max-w-md md:mx-auto mt-8 mx-4 md:mt-16 px-6 py-12 md:p-10 bg-white rounded-2xl border border-slate-200">
+        {/* <h3 className="font-bold text-lg text-center m-0 mb-4">
+          Tambah Tamu Undangan
+        </h3> */}
         <form onSubmit={handleSubmit}>
           <label
             htmlFor="recipient"
@@ -151,7 +154,7 @@ export default function HeroInvitation() {
             type="text"
             id="recipient"
             className="w-full p-3 border border-gray-300 rounded-md font-normal text-xs md:text-sm"
-            placeholder="Masukan nama anda..."
+            placeholder="Masukan nama tamu..."
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -183,15 +186,15 @@ export default function HeroInvitation() {
       </div> */}
       </div>
 
-      <div className="mt-4 px-4 md:px-24">
-        <h2 className="text-lg font-bold">
-          Daftar Tamu <span className="text-gray-600">{userLinks.length}</span>
+      <div className="mt-8 px-4 md:px-24">
+        <h2 className="text-sm md:text-lg font-semibold">
+          Daftar Tamu <span className="pl-1 text-gray-300">{userLinks.length}</span>
         </h2>
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-5">
           {userLinks.map((data, index) => (
             <li
               key={index}
-              className="px-4 py-8 rounded-lg bg-white shadow-lg flex flex-col space-y-4 flex-wrap w-full"
+              className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-4 flex-wrap w-full"
             >
               <h3 className="font-bold text-lg">{data?.name}</h3>
               <span className="text-sm font-light text-gray-600">{`${
@@ -213,6 +216,6 @@ export default function HeroInvitation() {
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 }

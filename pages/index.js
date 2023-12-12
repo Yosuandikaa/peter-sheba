@@ -11,9 +11,10 @@ import DigitalGift from "../components/dashboard/DigitalGift";
 import BottomNavigation from "../components/dashboard/BottomNavigation";
 import Forms from "../components/dashboard/Try";
 import MusicPlayer from "../components/dashboard/AudioPlayer";
-import QuoteOverlay from "../components/dashboard/QuoteOverlay";
+// import QuoteOverlay from "../components/dashboard/QuoteOverlay";
 import { VowsDetails } from "../components/dashboard/VowsDetails";
 import { useRef, useState } from "react";
+import QuoteOverlay from "../components/dashboard/QuoteOverlay";
 
 export default function Home() {
   const photos = [
@@ -44,13 +45,14 @@ export default function Home() {
 
   return (
     <div className="bg-[url('/img/main-bg.jpg')] bg-cover bg-center overflow-hidden relative">
-      <Hero action={toggleAnnouncement} />
+      <Hero action={toggleAnnouncement} isOpen={isAnnouncementOpen} />
       {isAnnouncementOpen && (
         <div ref={announcementRef}>
           <CoupleInfo />
           <EventInfo />
           <VowsDetails />
           <Gallery images={photos} />
+          <QuoteOverlay />
           <SendWishForm />
           {/* <QuoteOverlay /> */}
           {/* <AudioPlayer src={audioSrc} /> */}

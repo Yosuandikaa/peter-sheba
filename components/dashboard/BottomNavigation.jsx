@@ -36,7 +36,7 @@ const BottomNavigation = () => {
 
   return (
     <nav className="fixed bottom-0 left-0 w-full bg-white rounded-t-[1.2rem] p-3 flex justify-around items-center text-black z-50 font-medium shadow-md">
-      <a href="#home" onClick={() => handleScrollToId('home')} className={`flex flex-col items-center ${isActive('/') ? 'text-[#9a4e33]' : ''}`}>
+      <a href="#home" onClick={() => handleScrollToId('home')} className={`flex flex-col items-center ${isActive('/') ? '' : ''}`}>
       <img
               src="/img/homes.png"
               alt="home"
@@ -44,7 +44,7 @@ const BottomNavigation = () => {
             />
         <span className="text-xs">Home</span>
       </a>
-      <a href="#couple" onClick={() => handleScrollToId('couple')} className={`flex flex-col items-center ${isActive(`/#couple`) ? 'text-blue-500' : ''}`}>
+      <a href="#couple" onClick={() => handleScrollToId('couple')} className={`flex flex-col items-center ${isActive(`/couple`) ? 'text-blue-500' : ''}`}>
       <img
               src="/img/icon2.png"
               alt="couple"

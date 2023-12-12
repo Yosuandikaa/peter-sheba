@@ -82,7 +82,7 @@ const Gallery = ({ images }) => {
               alt={`Gallery Image ${lightboxIndex + 1}`}
               style={{
                 maxWidth: "90%",
-                // maxHeight: "100%",
+                maxHeight: "90%",
                 objectFit: "contain",
               }}
             />

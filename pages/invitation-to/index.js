@@ -40,7 +40,7 @@ const InvitationTo = () => {
 
   return (
     <div className="bg-[url('/img/main-bg.jpg')] bg-cover bg-center overflow-hidden relative">
-    <Hero action={toggleAnnouncement} />
+    <Hero action={toggleAnnouncement} isOpen={isAnnouncementOpen} />
     {isAnnouncementOpen && (
       <div ref={announcementRef}>
         <CoupleInfo />

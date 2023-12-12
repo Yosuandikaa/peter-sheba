@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import "aos/dist/aos.css";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const DigitalGift = () => {
   useEffect(() => {
@@ -73,31 +74,10 @@ const DigitalGift = () => {
             <h3 className="font-bold text-base md:text-lg">081573732797</h3>
             <button
               type="button"
-              className="w-full bg-[#9a4e33]  text-white py-3 rounded-md hover:bg-[#e6c3aa] transition duration-300 flex gap-4 items-center px-4 text-sm md:text-base mt-3"
+              className="w-full bg-[#9a4e33]  text-white py-3 rounded-md hover:bg-[#e6c3aa] transition duration-300 flex justify-center gap-4 items-center px-4 text-sm md:text-base mt-3"
               onClick={() => onCopy("081573732797")}
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_420_7)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4 2C4 1.46957 4.21071 0.960859 4.58579 0.585786C4.96086 0.210714 5.46957 0 6 0L14 0C14.5304 0 15.0391 0.210714 15.4142 0.585786C15.7893 0.960859 16 1.46957 16 2V10C16 10.5304 15.7893 11.0391 15.4142 11.4142C15.0391 11.7893 14.5304 12 14 12H6C5.46957 12 4.96086 11.7893 4.58579 11.4142C4.21071 11.0391 4 10.5304 4 10V2ZM6 1C5.73478 1 5.48043 1.10536 5.29289 1.29289C5.10536 1.48043 5 1.73478 5 2V10C5 10.2652 5.10536 10.5196 5.29289 10.7071C5.48043 10.8946 5.73478 11 6 11H14C14.2652 11 14.5196 10.8946 14.7071 10.7071C14.8946 10.5196 15 10.2652 15 10V2C15 1.73478 14.8946 1.48043 14.7071 1.29289C14.5196 1.10536 14.2652 1 14 1H6ZM2 5C1.73478 5 1.48043 5.10536 1.29289 5.29289C1.10536 5.48043 1 5.73478 1 6V14C1 14.2652 1.10536 14.5196 1.29289 14.7071C1.48043 14.8946 1.73478 15 2 15H10C10.2652 15 10.5196 14.8946 10.7071 14.7071C10.8946 14.5196 11 14.2652 11 14V13H12V14C12 14.5304 11.7893 15.0391 11.4142 15.4142C11.0391 15.7893 10.5304 16 10 16H2C1.46957 16 0.960859 15.7893 0.585786 15.4142C0.210714 15.0391 0 14.5304 0 14V6C0 5.46957 0.210714 4.96086 0.585786 4.58579C0.960859 4.21071 1.46957 4 2 4H3V5H2Z"
-                    fill="white"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_420_7">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              Copy No.Rekening
+              Copy Number
             </button>
           </div>
         </div>
@@ -190,7 +170,7 @@ const DigitalGift = () => {
             Gembala GKKI M2 Pdt Dr Lukas Kacaribu MH dan seluruh jemaat{" "}
           </span>
         </div>
-        <div className="mt-3">
+        <div className="mt-3 pb-12">
           <img
             src="/img/foto2.jpg"
             alt="bunga"
@@ -210,13 +190,18 @@ const DigitalGift = () => {
           >
             27 Desember 2023
           </span>
-          <span
-            className=" text-xs font-normal text-center mx-auto block pb-12"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-          >
-            Made with love by @yosuandikaa
-          </span>
+          <div className="flex justify-center items-center">
+            <span
+              className=" text-xs font-normal text-center mx-auto inline-block bg-white/80 p-3 rounded-md max-w-xs h-full"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+            >
+              Made with love by{" "}
+              <Link href="https://instagram.com/yosuandikaa?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
+                <strong className="underline font-semibold">@yosuandikaa</strong>
+              </Link>
+            </span>
+          </div>
         </div>
       </div>
     </div>
