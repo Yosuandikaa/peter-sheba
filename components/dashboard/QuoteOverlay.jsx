@@ -1,5 +1,6 @@
 // components/QuoteOverlay.js
 import { useState, useEffect } from "react";
+import "aos/dist/aos.css";
 
 const QuoteOverlay = () => {
   const [quoteIndex, setQuoteIndex] = useState(0);
@@ -32,6 +33,17 @@ const QuoteOverlay = () => {
     // Tambahkan lebih banyak jika diperlukan
   ];
 
+  useEffect(() => {
+    // Inisialisasi AOS.js setelah komponen dimount
+    import("aos").then((aos) => {
+      aos.init({
+        duration: 900, // durasi animasi
+        once: false, // animasi hanya terjadi sekali
+        easing: "ease-in-out", // jenis animasi
+      });
+    });
+  }, []);
+
   //   useEffect(() => {
   //     const intervalId = setInterval(() => {
   //       setQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
@@ -49,13 +61,22 @@ const QuoteOverlay = () => {
       />
       <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
       <div className="flex flex-col space-y-4">
-        <h3 className="text-white text-lg font-semibold z-10 absolute top-6 left-4 md:top-12 md:left-12">Quotes</h3>
-
+        <h3
+          className="text-white text-lg font-semibold z-10 absolute top-6 left-4 md:top-12 md:left-12"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          Quotes
+        </h3>
       </div>
       <div className="flex items-center justify-center text-white z-10 relative h-full">
         {/* <h1 className="text-4xl font-bold mb-4"></h1> */}
         {/* ... Your page content ... */}
-        <span className="text-xs md:text-sm font-medium w-[90%] md:w-[40%] text-center">
+        <span
+          className="text-xs md:text-sm font-medium w-[90%] md:w-[40%] text-center"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           {quotes[backgroundIndex]}
         </span>
       </div>

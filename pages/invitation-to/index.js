@@ -1,14 +1,14 @@
-import React, { useRef, useState } from 'react'
-import RegistrationPage from '../../components/invitation-to/HeroInvitation'
-import Hero from '../../components/invitation-to/Hero';
-import { CoupleInfo } from '../../components/dashboard/CoupleInfo';
-import { EventInfo } from '../../components/dashboard/EventInfo';
-import { VowsDetails } from '../../components/dashboard/VowsDetails';
-import Gallery from '../../components/dashboard/Gallery';
-import SendWishForm from '../../components/dashboard/SendWishForm';
-import DigitalGift from '../../components/dashboard/DigitalGift';
-import MusicPlayer from '../../components/dashboard/AudioPlayer';
-import BottomNavigation from '../../components/dashboard/BottomNavigation';
+import React, { useRef, useState } from "react";
+import RegistrationPage from "../../components/invitation-to/HeroInvitation";
+import Hero from "../../components/invitation-to/Hero";
+import { CoupleInfo } from "../../components/dashboard/CoupleInfo";
+import { EventInfo } from "../../components/dashboard/EventInfo";
+import { VowsDetails } from "../../components/dashboard/VowsDetails";
+import Gallery from "../../components/dashboard/Gallery";
+import SendWishForm from "../../components/dashboard/SendWishForm";
+import DigitalGift from "../../components/dashboard/DigitalGift";
+import MusicPlayer from "../../components/dashboard/AudioPlayer";
+import BottomNavigation from "../../components/dashboard/BottomNavigation";
 
 const InvitationTo = () => {
   const photos = [
@@ -22,7 +22,6 @@ const InvitationTo = () => {
     { src: "/img/foto10.jpg", width: "350px", height: "240px" },
     { src: "/img/foto11.jpg", width: "350px", height: "240px" },
     { src: "/img/foto18.jpeg", width: "350px", height: "240px" },
-
   ];
   const audioSrc = "/music/Esok_kan_ku_jelang.mp3";
 
@@ -34,29 +33,31 @@ const InvitationTo = () => {
 
     // Scroll ke elemen pengumuman dengan animasi smooth
     if (!isAnnouncementOpen && announcementRef.current) {
-      announcementRef.current.scrollIntoView({ behavior: 'smooth' });
+      announcementRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <div className="bg-[url('/img/main-bg.jpg')] bg-cover bg-center overflow-hidden relative">
-    <Hero action={toggleAnnouncement} isOpen={isAnnouncementOpen} />
-    {isAnnouncementOpen && (
-      <div ref={announcementRef}>
-        <CoupleInfo />
-        <EventInfo />
-        <VowsDetails />
-        <Gallery images={photos} />
-        <SendWishForm />
-        {/* <QuoteOverlay /> */}
-        {/* <AudioPlayer src={audioSrc} /> */}
-        <DigitalGift />
-        <MusicPlayer />
-        <BottomNavigation />
-      </div>
-    )}
-  </div>
-  )
-}
+      <Hero action={toggleAnnouncement} isOpen={isAnnouncementOpen} />
+      {isAnnouncementOpen && (
+        <div ref={announcementRef}>
+          <CoupleInfo />
+          <EventInfo />
+          <VowsDetails />
+          <Gallery images={photos} />
+          <SendWishForm />
+          {/* <QuoteOverlay /> */}
+          {/* <AudioPlayer src={audioSrc} /> */}
+          <DigitalGift />
+          <MusicPlayer />
+          <div className="block md:hidden">
+            <BottomNavigation />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default InvitationTo;

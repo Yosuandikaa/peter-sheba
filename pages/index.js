@@ -58,7 +58,9 @@ export default function Home() {
           {/* <AudioPlayer src={audioSrc} /> */}
           <DigitalGift />
           <MusicPlayer />
+          <div className="block md:hidden">
           <BottomNavigation />
+          </div>
         </div>
       )}
     </div>
