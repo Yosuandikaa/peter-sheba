@@ -21,9 +21,9 @@
 // utils/dbConnect.js
 import mongoose from 'mongoose';
 
-const MONGODB_URI_URL = process.env.MONGODB_URI_URL;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI_URL) {
+if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
 }
 
@@ -34,7 +34,7 @@ async function dbConnect() {
     return;
   }
 
-  const db = await mongoose.connect(MONGODB_URI_URL, {
+  const db = await mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
