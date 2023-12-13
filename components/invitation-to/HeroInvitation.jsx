@@ -210,9 +210,9 @@ export default function HeroInvitation() {
               className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-8 flex-wrap w-full max-w-full overflow-hidden"
             >
               <h3 className="font-bold text-lg">{data?.name}</h3>
-              <p className="text-sm font-light text-gray-600 w-full max-w-full flex flex-wrap">{`${
+              <h6 className="text-sm font-light text-gray-600 w-full max-w-full flex flex-wrap">{`${
                 window.location.origin
-              }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</p>
+              }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</h6>
               {/* <CopyToClipboard
                 text={`${
                   typeof window !== "undefined" && window.location.origin

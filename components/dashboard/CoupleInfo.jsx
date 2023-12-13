@@ -70,9 +70,9 @@ export const CoupleInfo = () => {
                 Pdp. Peter Setiawan, S.I.Kom (can)
               </h3>
               <span className="font-normal text-sm md:text-base block w-[70%] text-center">
-                Putra dari Bapak Tri Satmoko dan Ibu Iis Komariah{" "}
+                Putra dari Bapak Pdp. Tri Satmoko dan Pdp. Ibu Iis Komariah{" "}
               </span>
-              <div className="absolute top-[18.1rem] md:top-[21.2rem] right-[4rem] md:right-[7.5rem]">
+              <div className="absolute top-[18.1rem] md:top-[21.2rem] right-[3.5rem] md:right-[7.5rem]">
               <svg
                   width="8"
                   height="14"
@@ -115,7 +115,7 @@ export const CoupleInfo = () => {
                 Pdp. Elisheba Euodia Br Tarigan, M.Th
               </h3>
               <span className="font-normal text-sm md:text-base block w-[80%] text-center">
-                Putri dari Bapak Permata Tarigan, Dip. Th dan Ibu Marhenita br
+                Putri dari Bapak Pdt. Permata Tarigan, Dip. Th dan Pdp.Ibu Marhenita br
                 Ginting, Amk
               </span>
               <div className="w-14 h-14 rounded-full flex items-center justify-center bg-white">
