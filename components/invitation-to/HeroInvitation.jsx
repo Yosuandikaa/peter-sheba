@@ -269,7 +269,7 @@ export default function HeroInvitation() {
                   });
                 }}
               >
-                Salin URL
+                Bagikan Link
               </button>
             </div>
           ))}
