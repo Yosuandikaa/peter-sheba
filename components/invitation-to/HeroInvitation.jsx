@@ -237,33 +237,34 @@ export default function HeroInvitation() {
                 //   });
                 // }}
                 onClick={async () => {
-                  shareWithNavigator({
+                  shareVideoWithNavigator({
                     title: data?.name,
                     url: `${
                       typeof window !== "undefined" && window.location.origin
                     }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
-                    text: `
-                    Kepada Yth.
-                    Bapak/Ibu/Saudara/i
-                    <b>${title}</b>
+                    // text: `
+                    // Kepada Yth.
+                    // Bapak/Ibu/Saudara/i
+                    // <b>${title}</b>
                   
-                    <b>Shalom, Salam Sejahtera dalam kasih,</b>
-                    Kami saling mencintai, karena Tuhan Yesus Kristus yang pertama kali mencintai kami,
-                    Tuhan membuat segala sesuatu indah pada waktunya, begitu indah saat Dia mempertemukan kami dan mempersatukan kami dalam ikatan Pernikahan Kudus.
+                    // <b>Shalom, Salam Sejahtera dalam kasih,</b>
+                    // Kami saling mencintai, karena Tuhan Yesus Kristus yang pertama kali mencintai kami,
+                    // Tuhan membuat segala sesuatu indah pada waktunya, begitu indah saat Dia mempertemukan kami dan mempersatukan kami dalam ikatan Pernikahan Kudus.
                     
-                    Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i .... untuk menghadiri acara kami.
+                    // Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i .... untuk menghadiri acara kami.
                     
-                    Berikut link undangan untuk info lengkap dari acara kami :
-                    ${url}
+                    // Berikut link undangan untuk info lengkap dari acara kami :
+                    // ${url}
                     
-                    link
-                    (mohon gunakan browser chrome untuk lebih maksimal)
+                    // link
+                    // (mohon gunakan browser chrome untuk lebih maksimal)
                     
-                    Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
+                    // Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
                     
-                    Hormat Kami,
-                    Peter & Elisheba;
-                    `,
+                    // Hormat Kami,
+                    // Peter & Elisheba;
+                    // `,
+                    performer: data?.name
                   
                   });
                 }}
