@@ -185,19 +185,36 @@ const DigitalGift = () => {
             Peter & Sheba
           </h3>
           <span
-            className="text-xs font-medium text-center mt-2 mx-auto block pb-8"
+            className="text-xs font-medium text-center mt-2 mx-auto block"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
           >
             27 Desember 2023
           </span>
+          <div className="flex flex-col space-y-2">
+          <span
+            className="text-xs font-medium text-center mt-2 mx-auto block"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
+            Special Music By:
+          </span>
+          <span
+            className="text-xs font-medium text-center mt-2 mx-auto block pb-8"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
+            SOG Worship
+          </span>
+
+          </div>
           <div className="flex justify-center items-center">
             <span
               className=" text-xs font-normal text-center mx-auto inline-block bg-white/80 p-3 rounded-md max-w-xs h-full"
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
-              Made with love by Peter's brother{" "}
+              Made with love by{" "}
               <Link href="https://instagram.com/yosuandikaa?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
                 <strong className="underline font-semibold">@yosuandikaa</strong>
               </Link>
