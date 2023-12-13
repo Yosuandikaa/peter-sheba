@@ -203,7 +203,7 @@ export default function HeroInvitation() {
           Daftar Tamu{" "}
           <span className="pl-1 text-gray-300">{userLinks.length}</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 :md:grid-cols-3 lg:grid-cols-4 gap-5">
           {userLinks.map((data, index) => (
             <div
               key={index}
