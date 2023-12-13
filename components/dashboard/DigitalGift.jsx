@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import "aos/dist/aos.css";
@@ -170,7 +171,7 @@ const DigitalGift = () => {
             Gembala GKKI M2 Pdt. Dr. Lukas Kacaribu, MH dan seluruh jemaat{" "}
           </span>
         </div>
-        <div className="mt-3 pb-12">
+        <div className="mt-3 pb-16">
           <img
             src="/img/foto2.jpg"
             alt="bunga"
@@ -196,7 +197,7 @@ const DigitalGift = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
-              Made with love by{" "}
+              Made with love by Peter's brother{" "}
               <Link href="https://instagram.com/yosuandikaa?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
                 <strong className="underline font-semibold">@yosuandikaa</strong>
               </Link>
