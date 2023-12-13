@@ -5,6 +5,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
 import { toast } from "react-toastify";
 import apiService from "../../services/apiService";
+import shareWithNavigator, { shareVideoWithNavigator } from "../../lib/shareNavigator";
 
 export default function HeroInvitation() {
   const router = useRouter();
@@ -131,6 +132,15 @@ export default function HeroInvitation() {
   //     );
   //   }
   // };
+  const handleShare = async () => {
+    shareWithNavigator({
+      link: url,
+      user,
+      authorId: user?.id,
+      performer: name,
+      caption: captions
+    });
+  };
 
   return (
     <div className="">
@@ -200,7 +210,7 @@ export default function HeroInvitation() {
               <span className="text-sm font-light text-gray-600">{`${
                 window.location.origin
               }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</span>
-              <CopyToClipboard
+              {/* <CopyToClipboard
                 text={`${
                   typeof window !== "undefined" && window.location.origin
                 }/invitation-to?nama=${encodeURIComponent(data?.name)}`}
@@ -211,7 +221,21 @@ export default function HeroInvitation() {
                 >
                   Salin URL
                 </button>
-              </CopyToClipboard>
+              </CopyToClipboard> */}
+               <button
+                  className="bg-[#353434] text-white px-2 py-1 rounded-full"
+                  onClick={async () => {
+                    shareWithNavigator({
+                      link: `${
+                        typeof window !== "undefined" && window.location.origin
+                      }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
+                      performer: data?.name,
+                
+                    });
+                  }}                  
+                >
+                  Salin URL
+                </button>
             </li>
           ))}
         </ul>

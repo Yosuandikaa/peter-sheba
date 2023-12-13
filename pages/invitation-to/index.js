@@ -9,6 +9,7 @@ import SendWishForm from "../../components/dashboard/SendWishForm";
 import DigitalGift from "../../components/dashboard/DigitalGift";
 import MusicPlayer from "../../components/dashboard/AudioPlayer";
 import BottomNavigation from "../../components/dashboard/BottomNavigation";
+import QuoteOverlay from "../../components/dashboard/QuoteOverlay";
 
 const InvitationTo = () => {
   const photos = [
@@ -46,6 +47,7 @@ const InvitationTo = () => {
           <EventInfo />
           <VowsDetails />
           <Gallery images={photos} />
+          <QuoteOverlay />
           <SendWishForm />
           {/* <QuoteOverlay /> */}
           {/* <AudioPlayer src={audioSrc} /> */}
