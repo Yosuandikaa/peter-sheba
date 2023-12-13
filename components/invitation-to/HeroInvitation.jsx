@@ -242,12 +242,12 @@ export default function HeroInvitation() {
                     text: `
                           Check out my music video! Make sure to vote for it often so I can win the opportunity to perform at the wePOP come together on 6 August 2023.
                           to this link
-                          ${link}
+                          ${url}
 
                           It's Easy! Click this link, vote for me now, and you too can win amazing weekly prizes:
 
                           THANKS!`,
-                    link: `${
+                    url: `${
                       typeof window !== "undefined" && window.location.origin
                     }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
                   });
