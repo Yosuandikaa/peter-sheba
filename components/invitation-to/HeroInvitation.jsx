@@ -247,9 +247,9 @@ export default function HeroInvitation() {
         It's Easy! Click this link, vote for me now, and you too can win amazing weekly prizes:
 
         THANKS!`,
-                    link: `${
-                      typeof window !== "undefined" && window.location.origin
-                    }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
+                    // link: `${
+                    //   typeof window !== "undefined" && window.location.origin
+                    // }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
                   });
                 }}
               >
