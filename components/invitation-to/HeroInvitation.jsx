@@ -238,8 +238,8 @@ export default function HeroInvitation() {
                 // }}
                 onClick={async () => {
                   shareWithNavigator({
-                    title: "",
-                    text: `${performer}
+                    title: data?.name,
+                    text: `
                           Check out my music video! Make sure to vote for it often so I can win the opportunity to perform at the wePOP come together on 6 August 2023.
                           to this link
                           ${link}
