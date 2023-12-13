@@ -204,10 +204,10 @@ export default function HeroInvitation() {
           {userLinks.map((data, index) => (
             <li
               key={index}
-              className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-4 flex-wrap w-full"
+              className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-4 flex-wrap w-full max-w-full overflow-hidden"
             >
               <h3 className="font-bold text-lg">{data?.name}</h3>
-              <span className="text-sm font-light text-gray-600">{`${
+              <span className="text-sm font-light text-gray-600 block">{`${
                 window.location.origin
               }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</span>
               {/* <CopyToClipboard
@@ -225,7 +225,7 @@ export default function HeroInvitation() {
                <button
                   className="bg-[#353434] text-white px-2 py-1 rounded-full"
                   onClick={async () => {
-                    shareWithNavigator({
+                    shareVideoWithNavigator({
                       link: `${
                         typeof window !== "undefined" && window.location.origin
                       }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
