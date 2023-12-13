@@ -210,9 +210,9 @@ export default function HeroInvitation() {
               className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-4 flex-wrap w-full max-w-full overflow-hidden"
             >
               <h3 className="font-bold text-lg">{data?.name}</h3>
-              <span className="text-sm font-light text-gray-600 w-full max-w-full flex flex-wrap">{`${
+              <p className="text-sm font-light text-gray-600 w-full max-w-full flex flex-wrap">{`${
                 window.location.origin
-              }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</span>
+              }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</p>
               {/* <CopyToClipboard
                 text={`${
                   typeof window !== "undefined" && window.location.origin
@@ -226,7 +226,7 @@ export default function HeroInvitation() {
                 </button>
               </CopyToClipboard> */}
               <button
-                className="bg-[#353434] text-white px-2 py-1 rounded-full w-full"
+                className="bg-[#353434] text-white p-2 rounded-full w-full"
                 // onClick={async () => {
                 //   shareVideoWithNavigator({
                 //     link: `${
