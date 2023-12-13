@@ -207,7 +207,7 @@ export default function HeroInvitation() {
           {userLinks.map((data, index) => (
             <div
               key={index}
-              className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-4 flex-wrap w-full max-w-full overflow-hidden"
+              className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-8 flex-wrap w-full max-w-full overflow-hidden"
             >
               <h3 className="font-bold text-lg">{data?.name}</h3>
               <p className="text-sm font-light text-gray-600 w-full max-w-full flex flex-wrap">{`${
