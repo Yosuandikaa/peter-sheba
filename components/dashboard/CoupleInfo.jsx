@@ -72,7 +72,7 @@ export const CoupleInfo = () => {
               <span className="font-normal text-sm md:text-base block w-[70%] text-center">
                 Putra dari Bapak Pdp. Tri Satmoko dan Pdp. Ibu Iis Komariah{" "}
               </span>
-              <div className="absolute top-[18.1rem] md:top-[21.2rem] right-[3.5rem] md:right-[7.5rem]">
+              <div className="absolute top-[18.1rem] md:top-[21.2rem] right-[3rem] md:right-[7.5rem]">
               <svg
                   width="8"
                   height="14"
