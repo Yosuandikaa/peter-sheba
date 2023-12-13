@@ -239,16 +239,32 @@ export default function HeroInvitation() {
                 onClick={async () => {
                   shareWithNavigator({
                     title: data?.name,
-                    text: `
-                          Check out my music video! Make sure to vote for it often so I can win the opportunity to perform at the wePOP come together on 6 August 2023.
-                          to this link
-
-                          It's Easy! Click this link, vote for me now, and you too can win amazing weekly prizes:
-
-                          THANKS!`,
                     url: `${
                       typeof window !== "undefined" && window.location.origin
                     }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
+                    text: `
+                    Kepada Yth.
+                    Bapak/Ibu/Saudara/i
+                    <b>${title}</b>
+                  
+                    <b>Shalom, Salam Sejahtera dalam kasih,</b>
+                    Kami saling mencintai, karena Tuhan Yesus Kristus yang pertama kali mencintai kami,
+                    Tuhan membuat segala sesuatu indah pada waktunya, begitu indah saat Dia mempertemukan kami dan mempersatukan kami dalam ikatan Pernikahan Kudus.
+                    
+                    Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i .... untuk menghadiri acara kami.
+                    
+                    Berikut link undangan untuk info lengkap dari acara kami :
+                    ${url}
+                    
+                    link
+                    (mohon gunakan browser chrome untuk lebih maksimal)
+                    
+                    Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
+                    
+                    Hormat Kami,
+                    Peter & Elisheba;
+                    `,
+                  
                   });
                 }}
               >
