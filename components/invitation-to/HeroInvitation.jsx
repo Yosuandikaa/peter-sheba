@@ -210,7 +210,7 @@ export default function HeroInvitation() {
               className="px-4 py-8 rounded-lg bg-white border border-slate-200 flex flex-col space-y-4 flex-wrap w-full max-w-full overflow-hidden"
             >
               <h3 className="font-bold text-lg">{data?.name}</h3>
-              <span className="text-sm font-light text-gray-600 block w-full max-w-full">{`${
+              <span className="text-sm font-light text-gray-600 w-full max-w-full flex flex-wrap">{`${
                 window.location.origin
               }/invitation-to?nama=${encodeURIComponent(data?.name)}`}</span>
               {/* <CopyToClipboard
@@ -226,7 +226,7 @@ export default function HeroInvitation() {
                 </button>
               </CopyToClipboard> */}
               <button
-                className="bg-[#353434] text-white px-2 py-1 rounded-full"
+                className="bg-[#353434] text-white px-2 py-1 rounded-full w-full"
                 // onClick={async () => {
                 //   shareVideoWithNavigator({
                 //     link: `${
@@ -240,13 +240,13 @@ export default function HeroInvitation() {
                   shareWithNavigator({
                     // title: "",
                     text: `${performer}
-        Check out my music video! Make sure to vote for it often so I can win the opportunity to perform at the wePOP come together on 6 August 2023.
-        to this link
-        ${link}
+                          Check out my music video! Make sure to vote for it often so I can win the opportunity to perform at the wePOP come together on 6 August 2023.
+                          to this link
+                          ${link}
 
-        It's Easy! Click this link, vote for me now, and you too can win amazing weekly prizes:
+                          It's Easy! Click this link, vote for me now, and you too can win amazing weekly prizes:
 
-        THANKS!`,
+                          THANKS!`,
                     link: `${
                       typeof window !== "undefined" && window.location.origin
                     }/invitation-to?nama=${encodeURIComponent(data?.name)}`,
